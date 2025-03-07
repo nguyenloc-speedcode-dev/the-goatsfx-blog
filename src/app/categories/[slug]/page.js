@@ -27,7 +27,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   return {
     title: `${params.slug.replaceAll("-", " ")} Blogs`,
-    description: `Learn more about ${params.slug === "all" ? "web development" : params.slug} through our collection of expert blogs and tutorials`,
+    description: `Khám phá kiến thức ${params.slug === "tài chính" ? "và kỹ năng tài chính" : params.slug} qua các bài viết chuyên sâu, giúp bạn nắm bắt xu hướng mới nhất.`,
   };
 }
 

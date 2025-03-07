@@ -6,7 +6,7 @@ const siteMetadata = {
   description: 'Chia sẻ kiến thức, phân tích thị trường và chiến lược giao dịch Forex & Crypto dành cho nhà đầu tư.',
   language: 'vi-VN',
   theme: 'light', // system, dark or light
-  siteUrl: 'https://create-blog-with-nextjs.vercel.app', // your website URL
+  siteUrl: 'https://www.thegoatsfx.com', // your website URL
   siteLogo: '/logo.png',
   socialBanner: '/social-banner.png', // add social banner in the public folder
   email: 'speedcode247@gmail.com',

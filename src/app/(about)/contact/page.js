@@ -4,8 +4,8 @@ import siteMetadata from "@/src/utils/siteMetaData";
 
 
 export const metadata = {
-  title: "Contact Me",
-  description: `Contact me through the form available on this page or email me at ${siteMetadata.email}`,
+  title: "Liên hệ với chúng tôi",
+  description: `Liên hệ với tôi thông qua biểu mẫu có sẵn trên trang này hoặc gửi email cho tôi tại ${siteMetadata.email}`,
 };
 
 
