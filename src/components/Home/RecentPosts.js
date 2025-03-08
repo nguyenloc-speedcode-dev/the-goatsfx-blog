@@ -9,7 +9,7 @@ const RecentPosts = ({ blogs }) => {
   return (
     <section className="w-full  mt-16  px-6  flex flex-col items-center justify-center">
       <div className="w-full flex  justify-between">
-        <h2 className="w-fit inline-block font-bold capitalize text-xl md:text-3xl text-dark dark:text-light">
+        <h2 className="border-l-4 border-red-500 pl-2 w-fit inline-block font-bold capitalize text-xl md:text-3xl text-dark dark:text-light">
           Bài viết gần đây
         </h2>
         <Link

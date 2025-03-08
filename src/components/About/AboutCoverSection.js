@@ -15,10 +15,10 @@ const AboutCoverSection = () => {
 
       <div className='w-full md:w-1/2 flex flex-col text-left items-start justify-center px-5 xs:p-10 pb-10 lg:px-16'>
         <h2 className='font-bold capitalize text-4xl xs:text-5xl sxl:text-6xl  text-center lg:text-left'>
-          Dám mơ lớn, làm việc chăm chỉ, đạt được nhiều hơn! 🚀
+          Dám mơ lớn, làm việc chăm chỉ, đạt được nhiều hơn!
         </h2>
         <p className='font-medium capitalize mt-4 text-base'>
-          Châm ngôn này là động lực cho hành trình giao dịch của tôi. Tôi kết hợp chiến lược phân tích kỹ thuật với tư duy linh hoạt để chinh phục thị trường. Lấy cảm hứng từ những biến động tài chính và tư duy đầu tư, tôi không ngừng học hỏi và thích nghi. Mỗi giao dịch không chỉ là một cơ hội, mà còn là một bước tiến để tạo dấu ấn bền vững—từng quyết định một." 🚀📈
+          Mỗi giao dịch không chỉ là một cơ hội kiếm lợi nhuận, mà còn là một bước tiến vững chắc trên hành trình chinh phục thị trường. Chúng tôi không ngừng học hỏi, thích nghi và tối ưu chiến lược để xây dựng phong cách giao dịch bền vững. Thành công trong trading không chỉ đến từ phân tích kỹ thuật, mà còn từ tư duy linh hoạt và tâm lý giao dịch vững vàng
         </p>
       </div>
     </section>

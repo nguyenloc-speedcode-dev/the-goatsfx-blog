@@ -17,10 +17,10 @@ const Footer = () => {
   return (
     <footer className="mt-16 rounded-2xl bg-dark dark:bg-accentDark/90 m-2 sm:m-10 flex flex-col items-center text-light dark:text-dark">
       <h3 className="mt-16 font-medium dark:font-bold text-center capitalize text-2xl sm:text-3xl lg:text-4xl px-4">
-        Tâm lý giao dịch | Kiến thức giao dịch | Tin tức
+        TheGoatsFX - Tâm Lý Giao Dịch | Kiến Thức Giao Dịch | Tin Tức Mới Nhất
       </h3>
       <p className="mt-5 px-4 text-center w-full sm:w-3/5 font-light dark:font-medium text-sm sm:text-base">
-        Đăng ký để nắm vững tâm lý giao dịch, trau dồi kiến thức và nhận tin tức mới nhất. Tham gia cộng đồng hơn 5000+ thành viên để luôn cập nhật thông tin mới nhất!
+        Cập nhật tin tức thị trường nhanh chóng - Học hỏi chiến lược giao dịch hiệu quả - Rèn luyện tâm lý giao dịch vững vàng.
       </p>
 
       <form

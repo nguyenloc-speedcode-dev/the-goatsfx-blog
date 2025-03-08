@@ -5,13 +5,13 @@ const SkillList = [
   "Quản lý rủi ro & tâm lý giao dịch 🔥",
   "Scalping, Day Trading & Swing Trading",
   "Sử dụng TradingView & các công cụ giao dịch hiện đại",
-  "Quản lý rủi ro & kiểm soát tâm lý giao dịch 🔥",
   "Xây dựng hệ thống giao dịch tự động (Algo Trading) 🤖",
   "Đọc hiểu dữ liệu kinh tế & tin tức thị trường 📰",
   "Hướng dẫn & đào tạo cộng đồng trader",
   "Nhận diện mô hình giá & chỉ báo xu hướng",
-
+  "Cập nhật tin tức tài chính & dự báo xu hướng thị trường",
 ];
+
 
 const Skills = () => {
   return (
