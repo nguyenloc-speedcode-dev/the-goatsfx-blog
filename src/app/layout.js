@@ -74,6 +74,18 @@ export default function RootLayout({ children }) {
     document.documentElement.classList.remove('dark')
   }`}
     </Script> */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DB79RR9D9X"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-DB79RR9D9X');
+        `}
+        </Script>
         <Script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></Script>
         <MainLayout>
           {children}
