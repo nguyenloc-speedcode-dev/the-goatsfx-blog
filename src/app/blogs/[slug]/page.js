@@ -161,7 +161,7 @@ export default async function BlogPage({ params }) {
 
         {/* <BlogDetails blog={blog} slug={slug} /> */}
 
-        <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
+        <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-2 md:px-5">
           <div className="col-span-12  lg:col-span-8">
             <h1
               className="font-in font-[800]  "

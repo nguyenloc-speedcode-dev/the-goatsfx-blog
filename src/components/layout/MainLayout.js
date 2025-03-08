@@ -8,8 +8,10 @@ const MainLayout = ({ children }) => {
     return (
         <div>
             <Header />
-
-            <main className='px-2 sm:px-5 sm:max-w-[768px] md:max-w-[1024px] xl:max-w-[1368px] w-full m-auto'>
+            <div className="w-full overflow-hidden">
+                <gecko-coin-price-marquee-widget locale="en" outlined="true" coin-ids="" initial-currency="usd"></gecko-coin-price-marquee-widget>
+            </div>
+            <main className=' sm:max-w-[768px] md:max-w-[1024px] xl:max-w-[1368px] w-full m-auto'>
                 {children}
             </main>
             <Footer />

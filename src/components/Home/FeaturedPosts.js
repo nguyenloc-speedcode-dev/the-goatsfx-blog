@@ -11,7 +11,7 @@ const FeaturedPosts = ({ blogs }) => {
     sortedBlogs.filter((b) => b.tags.includes('news')) : []
 
   return (
-    <section className="bg-white text-black p-6">
+    <section className="bg-white text-black p-2 md:p-6">
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Main News */}
@@ -26,7 +26,7 @@ const FeaturedPosts = ({ blogs }) => {
               placeholder="blur"
               objectFit="cover"
               priority
-              className="w-full h-[31rem] object-cover"
+              className="w-full md:h-[31rem] object-cover"
             />
             <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full">
               <span className="bg-red-600 p-2 rounded-md capitalize text-xs font-bold">

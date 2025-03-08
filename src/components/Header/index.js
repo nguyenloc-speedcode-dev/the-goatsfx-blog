@@ -43,7 +43,7 @@ const Header = () => {
         </div>
       </button>
 
-      <nav className=" w-max py-3 px-6 sm:px-8  border-dark rounded-full font-medium capitalize  items-center flex  sm:hidden
+      <nav className=" w-max py-3 px-6 sm:px-8 border md:border-none  border-[#ddd] rounded-full font-medium capitalize  items-center flex  sm:hidden
         fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
         transition-all ease duration-300
         "
