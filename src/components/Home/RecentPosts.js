@@ -5,7 +5,8 @@ import BlogLayoutThree from "../Blog/BlogLayoutThree";
 
 const RecentPosts = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
-
+  const filteredBlog = sortedBlogs?.length > 0 ?
+    sortedBlogs.filter((b) => !b.tags.includes('news')) : []
   return (
     <section className="w-full  mt-16 p-2   md:px-6  flex flex-col items-center justify-center">
       <div className="w-full flex  justify-between">
@@ -21,7 +22,7 @@ const RecentPosts = ({ blogs }) => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-16 mt-16">
-        {sortedBlogs.slice(4, 16).map((blog, index) => {
+        {filteredBlog.slice(0, 13).map((blog, index) => {
           return (
             <article key={index} className="col-span-1 row-span-1 relative">
               <BlogLayoutThree blog={blog} />
