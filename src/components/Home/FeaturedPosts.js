@@ -24,7 +24,7 @@ const FeaturedPosts = ({ blogs }) => {
               width={filteredBlog[0].image.width}
               height={filteredBlog[0].image.height}
               placeholder="blur"
-              objectFit="cover"
+
               priority
               className="w-full md:h-[31rem] object-cover"
             />
