@@ -40,7 +40,7 @@ const BlogLayoutThree = ({ blog }) => {
         </Link>
 
         <span className="capitalize text-gray dark:text-light/50 font-semibold text-[12px]">
-          {format(new Date(blog.publishedAt), "MMMM/dd, yyyy", { locale: vi })}
+          {format(new Date(blog.publishedAt), "dd/MM/yyyy", { locale: vi })}
         </span>
       </div>
     </div>
