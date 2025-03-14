@@ -51,17 +51,20 @@ const FeaturedPosts = ({ blogs }) => {
               filteredBlog?.length > 0 &&
               filteredBlog?.slice(1, 7)?.map((b, index) => (
                 <li key={index} className="flex items-center gap-3 border-b pb-2">
-                  <Link href={b?.url} className="block w-20 h-12">
-                    <Image
-                      width={b.image.width}
-                      height={b.image.height}
-                      blurDataURL={b?.image.blurDataURL}
-                      placeholder="blur"
-                      src={b?.image?.src}
-                      alt={b?.title}
-                      objectFit="cover"
-                      className="w-12 h-12 rounded"
-                    />
+                  <Link href={b?.url} >
+                    <div className="block w-12 h-12">
+                      <Image
+                        width={b.image.width}
+                        height={b.image.height}
+                        blurDataURL={b?.image.blurDataURL}
+                        placeholder="blur"
+                        src={b?.image?.src}
+                        alt={b?.title}
+                        objectFit="cover"
+                        className="w-12 h-12 rounded"
+                      />
+                    </div>
+
                   </Link>
                   <Link href={b?.url}>
                     <p className="text-sm">{b?.title}</p>
