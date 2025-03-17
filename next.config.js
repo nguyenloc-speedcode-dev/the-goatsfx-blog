@@ -8,15 +8,7 @@ module.exports = {
     config.plugins.push(new VeliteWebpackPlugin())
     return config
   },
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/home",
-        permanent: true, // 301
-      },
-    ];
-  },
+
 }
 
 class VeliteWebpackPlugin {
