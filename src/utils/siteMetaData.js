@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'TheGoatsFX – Tài chính cá nhân',
   author: 'TheGoatsFX',
   headerTitle: 'TheGoatsFX',
-  description: 'Chia sẻ kiến thức, phân tích thị trường và chiến lược giao dịch Forex & Crypto dành cho nhà đầu tư.',
+  description: 'The Goats Trading – Cập nhật tin tức Bitcoin, Crypto, Blockchain nhanh nhất hôm nay. Chia sẻ kiến thức đầu tư, phân tích thị trường và chiến lược giao dịch Forex & Crypto dành cho nhà đầu tư.',
   language: 'vi-VN',
   theme: 'light', // system, dark or light
   siteUrl: 'https://www.thegoatsfx.com', // your website URL
