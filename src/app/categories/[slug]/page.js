@@ -26,7 +26,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   return {
-    title: `${params.slug.replaceAll("-", " ")} Blogs`,
+    title: `${params.slug.replaceAll("-", " ")} -  Thể loại`,
     description: `Khám phá kiến thức ${params.slug === "tài chính" ? "và kỹ năng tài chính" : params.slug} qua các bài viết chuyên sâu, giúp bạn nắm bắt xu hướng mới nhất.`,
   };
 }

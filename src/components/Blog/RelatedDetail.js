@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 // import BlogfeaturedDetail from './BlogLayoutFeaturedDetail';
 import Link from 'next/link';
 
-const FeaturedDetail = () => {
+const RelatedDetail = ({ tags }) => {
     const [featuredPost, setfeaturedPost] = useState([])
 
     const getTopViewedPosts = async (limit = 5) => {
@@ -26,7 +26,11 @@ const FeaturedDetail = () => {
             const selectedPost = views.map((view) => {
                 return view.slug
             })
-            const filteredPosts = blogs.filter(post => selectedPost.includes(post.slug))
+
+
+            const filteredPosts = blogs.filter(post => selectedPost.includes(post.slug) &&
+                post?.tags?.some(tag => tags.includes(tag)))
+
             setfeaturedPost(filteredPosts)
 
         } catch (error) {
@@ -45,7 +49,7 @@ const FeaturedDetail = () => {
 
         <div className="bg-gray-100 p-4 rounded-lg shadow">
             <h2 className="text-lg font-bold border-l-4 border-red-500 pl-2 mb-4">
-                Bài viết xem nhiều nhất
+                Bài viết liên quan
             </h2>
             <ul className="space-y-4">
 
@@ -77,4 +81,4 @@ const FeaturedDetail = () => {
     )
 }
 
-export default FeaturedDetail
+export default RelatedDetail

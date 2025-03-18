@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { slug as slugger } from "github-slugger";
 import FeaturedDetail from "@/src/components/Blog/FeaturedDetail";
+import RelatedDetail from "@/src/components/Blog/RelatedDetail";
 export async function generateStaticParams() {
   return blogs.map((blog) => ({ slug: blog.slug }));
 }
@@ -192,6 +193,8 @@ export default async function BlogPage({ params }) {
           </div>
           <div className="col-span-12  lg:col-span-4">
             <FeaturedDetail />
+            <br />
+            <RelatedDetail tags={blog?.tags} />
           </div>
         </div>
 
