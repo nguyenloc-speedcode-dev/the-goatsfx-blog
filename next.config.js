@@ -4,8 +4,13 @@ module.exports = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? true : false,
   },
+  reactStrictMode: false,
   webpack: config => {
     config.plugins.push(new VeliteWebpackPlugin())
+    config.optimization.splitChunks = {
+      chunks: 'all',
+      minSize: 30 * 1024, // Chỉ chia nhỏ nếu tệp > 30KB
+    };
     return config
   },
 

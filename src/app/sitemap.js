@@ -31,9 +31,11 @@ export default function sitemap() {
 
     const blogPages = blogs.map((post) => ({
         url: `https://thegoatsfx.com/blogs/${post.slug}`,
-        lastModified: new Date(post.updatedAt), // Nếu có ngày cập nhật
+        lastModified: new Date(post.publishedAt).toISOString(), // Nếu có ngày cập nhật
         changeFrequency: "daily",
         priority: 0.9,
     }));
+
+
     return [...staticPages, ...blogPages];
 }

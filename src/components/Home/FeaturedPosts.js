@@ -1,3 +1,5 @@
+'use client'
+
 import { sortBlogs } from "@/src/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,7 +26,6 @@ const FeaturedPosts = ({ blogs }) => {
               width={filteredBlog[0].image.width}
               height={filteredBlog[0].image.height}
               placeholder="blur"
-
               priority
               className="w-full md:h-[31rem] object-cover"
             />
@@ -60,7 +61,6 @@ const FeaturedPosts = ({ blogs }) => {
                         placeholder="blur"
                         src={b?.image?.src}
                         alt={b?.title}
-                        objectFit="cover"
                         className="w-12 h-12 rounded"
                       />
                     </div>

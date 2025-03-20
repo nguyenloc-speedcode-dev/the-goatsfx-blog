@@ -112,7 +112,7 @@ export default function RootLayout({ children }) {
           gtag('config', 'G-DB79RR9D9X');
         `}
         </Script>
-        <Script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></Script>
+        <Script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js" strategy="lazyOnload"></Script>
         <MainLayout>
           {children}
         </MainLayout>
