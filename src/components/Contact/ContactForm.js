@@ -9,7 +9,7 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
-  console.log(errors);
+
 
   return (
     <form

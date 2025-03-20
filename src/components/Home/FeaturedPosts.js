@@ -26,8 +26,8 @@ const FeaturedPosts = ({ blogs }) => {
               width={filteredBlog[0].image.width}
               height={filteredBlog[0].image.height}
               placeholder="blur"
-
-              loading="lazy"
+              priority
+              fetchPriority="high"
               className="w-full md:h-[31rem] object-cover"
             />
             <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full">
@@ -64,6 +64,8 @@ const FeaturedPosts = ({ blogs }) => {
                         alt={b?.title}
                         className="w-12 h-12 rounded"
                         loading="lazy"
+                        formats={["image/webp"]}
+                        quality={80}
                       />
                     </div>
 
