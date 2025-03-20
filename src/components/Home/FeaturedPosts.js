@@ -26,7 +26,8 @@ const FeaturedPosts = ({ blogs }) => {
               width={filteredBlog[0].image.width}
               height={filteredBlog[0].image.height}
               placeholder="blur"
-              priority
+
+              loading="lazy"
               className="w-full md:h-[31rem] object-cover"
             />
             <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full">

@@ -2,7 +2,11 @@
   "extends": "next/core-web-vitals",
   "rules": {
     // Add other Next.js core-web-vitals rules here if needed
-
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-unreachable": "warn",
+    "no-empty": "warn",
     // Add the react/no-unescaped-entities rule
     "react/no-unescaped-entities": [
       "error",
