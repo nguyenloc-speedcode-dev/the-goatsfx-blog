@@ -63,6 +63,7 @@ const FeaturedPosts = ({ blogs }) => {
                         src={b?.image?.src}
                         alt={b?.title}
                         className="w-12 h-12 rounded"
+                        loading="lazy"
                       />
                     </div>
 
