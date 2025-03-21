@@ -53,6 +53,7 @@ const Header = () => {
 
       >
         <Link href="/" className="mr-2">Trang chủ</Link>
+        <Link href="/tinh-lot" className="mx-2">Tính lot</Link>
         <Link href="/about" className="mx-2">Về chúng tôi</Link>
         <Link href="/contact" className="mx-2">Liên hệ</Link>
         {/* <button onClick={() => setMode(mode === "light" ? "dark" : "light")  }
@@ -70,6 +71,7 @@ const Header = () => {
       <nav className=" w-max py-3 px-8  border-dark rounded-full font-medium capitalize  items-center hidden sm:flex
         fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50">
         <Link href="/" className="mr-2">Trang chủ</Link>
+        <Link href="/tinh-lot" className="mx-2">Tính lot</Link>
         <Link href="/about" className="mx-2">Về chúng tôi</Link>
         <Link href="/contact" className="mx-2">Liên hệ</Link>
         {/* <button onClick={() => setMode(mode === "light" ? "dark" : "light")}
