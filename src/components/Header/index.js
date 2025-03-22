@@ -19,7 +19,7 @@ const Header = () => {
     <header className="w-full p-4  px-5 sm:px-10 flex items-center justify-between">
       <Logo />
 
-      <button className="inline-block sm:hidden z-50" onClick={toggle} aria-label="Hamburger Menu">
+      <button className="inline-block sm:hidden z-[999]" onClick={toggle} aria-label="Hamburger Menu" >
         <div className="w-6 cursor-pointer transition-all ease duration-300">
           <div className="relative">
             <span className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
@@ -43,28 +43,20 @@ const Header = () => {
         </div>
       </button>
 
-      <nav className=" w-max py-3 px-6 sm:px-8 border md:border-none  border-[#ddd] rounded-full font-medium capitalize  items-center flex  sm:hidden
-        fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
-        transition-all ease duration-300
+      <nav className=" w-full py-3 px-6 sm:px-8 h-screen  font-medium capitalize  items-center flex flex-col justify-center gap-10  sm:hidden
+        fixed  right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
+        transition-all ease duration-300 
         "
         style={{
-          top: click ? "1rem" : "-5rem"
+          top: click ? "0" : "-100%"
         }}
-
+        onClick={toggle}
       >
-        <Link href="/" className="mr-2">Trang chủ</Link>
-        <Link href="/tinh-lot" className="mx-2">Tính lot</Link>
-        <Link href="/about" className="mx-2">Về chúng tôi</Link>
-        <Link href="/contact" className="mx-2">Liên hệ</Link>
-        {/* <button onClick={() => setMode(mode === "light" ? "dark" : "light")  }
-            className={cx("w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1", mode === "light" ? "bg-dark text-light" :
-            "bg-light text-dark" )}
-            aria-label="theme-switcher"
-            >
-                {
-                  mode === "light" ? <MoonIcon className={"fill-dark"} />  : <SunIcon className={"fill-dark"} />
-                }
-            </button> */}
+        <Link href="/" className="mx-2 font-[700] ">Trang chủ</Link>
+        <Link href="/tinh-lot" className="mx-2 font-[700]">Tính lot</Link>
+        <Link href="/about" className="mx-2 font-[700]">Về chúng tôi</Link>
+        <Link href="/contact" className="mx-2 font-[700]">Liên hệ</Link>
+
       </nav>
 
 
@@ -74,15 +66,7 @@ const Header = () => {
         <Link href="/tinh-lot" className="mx-2">Tính lot</Link>
         <Link href="/about" className="mx-2">Về chúng tôi</Link>
         <Link href="/contact" className="mx-2">Liên hệ</Link>
-        {/* <button onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={cx("w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1", mode === "light" ? "bg-dark text-light" :
-            "bg-light text-dark")}
-          aria-label="theme-switcher"
-        >
-          {
-            mode === "light" ? <MoonIcon className={"fill-dark"} /> : <SunIcon className={"fill-dark"} />
-          }
-        </button> */}
+
       </nav>
       <div className=" hidden sm:flex items-center">
         <a href={siteMetadata.telegram} rel="noopener noreferrer" className="inline-block w-6 h-6 mr-4" aria-label="Reach out to me via LinkedIn" target="_blank"><Telegram className="hover:scale-125 transition-all ease duration-200" /></a>
