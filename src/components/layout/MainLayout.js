@@ -8,6 +8,7 @@ import Script from 'next/script'
 
 
 const MainLayout = ({ children }) => {
+
     return (
         <div>
             <Header />

@@ -1,6 +1,12 @@
 import FormCaculate from "@/src/components/CaculateLots/FormCaculate";
-import { IconRequire } from "@/src/components/Icons";
 import React from "react";
+
+export const metadata = {
+  title: "Công Cụ Tính Lot",
+  description: `Làm sao để tính khối lượng vào lệnh chuẩn? Công cụ giúp tính số lot theo số vốn, rủi ro và pip stoploss chính xác nhất.`,
+  keywords:
+    "công cụ tính lot, tính khối lượng vào lệnh, giao dịch forex, quản lý vốn, forex tool",
+};
 
 const CaculateLots = () => {
   const onSubmit = (data) => console.log(data);

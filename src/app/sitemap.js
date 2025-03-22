@@ -10,6 +10,12 @@ export default function sitemap() {
             priority: 1,
         },
         {
+            url: "https://thegoatsfx.com/tinh-lot",
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 1,
+        },
+        {
             url: "https://thegoatsfx.com/categories/all",
             lastModified: new Date(),
             changeFrequency: "weekly",
