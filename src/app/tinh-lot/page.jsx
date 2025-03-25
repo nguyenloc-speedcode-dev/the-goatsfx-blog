@@ -9,8 +9,6 @@ export const metadata = {
 };
 
 const CaculateLots = () => {
-  const onSubmit = (data) => console.log(data);
-
   return (
     <div className="max-w-[870px] m-auto">
       <article

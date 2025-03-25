@@ -27,34 +27,56 @@ const FormCaculate = () => {
             setLotSize('')
         }
     }, [watchedName, reset]);
-
     const fetchExchangeRate = async (currencyPair) => {
         const mockRates = {
-            "EUR/USD": 1.08,
-            "GBP/USD": 1.27,
-            "USD/JPY": 145.30,
-            "USD/CAD": 1.36,
-            "AUD/USD": 0.67,
-            "NZD/USD": 0.62,
-            "EUR/JPY": 157.20,
+            "XXXUSD": 1,
+            "XAUUSD": 3000,
+            "BTCUSD": 85000,
+            "XAUUSD": 3000,
+            "BTCUSD": 85000,
+            "EURUSD": 1.08,
+            "USDJPY": 150.74,
+            "USDCAD": 1.43,
+            "AUDUSD": 0.69,
+            "GBPUSD": 1.27,
+            "NZDUSD": 0.63,
+            "USDCHF": 0.88,
+            "EURJPY": 162.0,
+            "JPYUSD": 0.0066,
         };
         return mockRates[currencyPair] || 1.0; // Mặc định nếu không có tỷ giá
     };
 
     const getPipValue = async (pair, lotSize = 1) => {
+        let quoteCurrency = pair.slice(3, 6);
         let exchangeRate = await fetchExchangeRate(pair);
         let pipUnit = pair.includes("JPY") ? 0.01 : 0.0001;
+        let pipValue;
 
-        if (pair.endsWith("USD")) {
-            return (pipUnit / exchangeRate) * lotSize * 100000;
+        if (pair === "XAUUSD") {
+            return 1 * lotSize; // Pip cố định cho vàng
+        }
+        if (pair === "BTCUSD") {
+            return (1 * lotSize) / 10; // Pip cố định cho Bitcoin
         }
 
-        let conversionRate = await fetchExchangeRate(pair.slice(3, 6) + "USD");
-        return ((pipUnit / exchangeRate) * lotSize * 100000) * conversionRate;
+        // Công thức chuẩn Medio
+        pipValue = (pipUnit / exchangeRate) * 100000 * lotSize;
+
+        // Nếu quoteCurrency không phải USD, phải đổi về USD
+        if (quoteCurrency !== "USD") {
+            let conversionRate = await fetchExchangeRate(`${quoteCurrency}USD`);
+            pipValue *= conversionRate;
+        }
+
+        return pipValue;
     };
 
+
+
     const calculateLotSize = async (data) => {
-        const { accountBalance, riskPercentage, stopLossPips, currencyPair } = data
+        const { accountBalance, riskPercentage, stopLossPips, currencyPair } = data;
+
         if (!riskPercentage || !stopLossPips) {
             alert("Vui lòng nhập đầy đủ thông tin.");
             return;
@@ -68,9 +90,11 @@ const FormCaculate = () => {
             return;
         }
 
-        let calculatedLotSize = riskAmount / (parseFloat(stopLossPips) * pipValue);
-        setLotSize(calculatedLotSize.toFixed(2)); // Làm tròn 2 chữ số
+        let result = riskAmount / (parseFloat(stopLossPips) * pipValue);
+        setLotSize(result)
+
     };
+
 
     const onSumit = (data) => {
         calculateLotSize(data)
@@ -133,12 +157,12 @@ const FormCaculate = () => {
                     <option value={"XXXUSD"}>xxxUSD</option>
                     <option value={"XAUUSD"}>XAUUSD</option>
                     <option value={"BTCUSD"}>BTCUSD</option>
-                    <option value={"xxxJPY"}>xxxJPY</option>
-                    <option value={"xxxCAD"}>xxxCAD</option>
-                    <option value={'xxxAUD'}>xxxAUD</option>
-                    <option value={"xxxGBP"}>xxxGBP</option>
-                    <option value={"xxxNZD"}>xxxNZD</option>
-                    <option value={"xxxCHF"}>xxxCHF</option>
+                    <option value={"XXXJPY"}>xxxJPY</option>
+                    <option value={"XXXCAD"}>xxxCAD</option>
+                    <option value={'XXXAUD'}>xxxAUD</option>
+                    <option value={"XXXGBP"}>xxxGBP</option>
+                    <option value={"XXXNZD"}>xxxNZD</option>
+                    <option value={"XXXCHF"}>xxxCHF</option>
                 </select>
             </div>
             <div className="relative mb-6">
